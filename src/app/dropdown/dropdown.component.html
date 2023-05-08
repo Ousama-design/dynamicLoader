@@ -1,0 +1,6 @@
+<label>{{ config.label }}</label>
+<br />
+<select (change)="change()" [(ngModel)]="select">
+  <option value="">{{ config.label }}</option>
+  <option *ngFor="let i of config.items" [value]="i">{{ i }}</option>
+</select>

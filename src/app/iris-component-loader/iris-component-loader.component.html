@@ -1,0 +1,11 @@
+<label>component loader</label> <br />
+<label>select component to render :</label>
+<br />
+<select [(ngModel)]="select" (change)="loadComponent(select)">
+  <option *ngFor="let c of config.components" [value]="c.selector">
+    {{ c.selector }}
+  </option>
+</select>
+<br />
+<br />
+<ng-container #componentContainer></ng-container>
